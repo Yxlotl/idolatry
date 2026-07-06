@@ -3,13 +3,13 @@
 	"id": "idolatry",
 	"version": "${version}",
 	"name": "Idolatry",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "Worship at the idols of the past.",
 	"authors": [
 		"Me!"
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"sources": "https://github.com/Yxlotl/idolatry"
 	},
 	"license": "CC0-1.0",
 	"icon": "assets/idolatry/icon.png",
