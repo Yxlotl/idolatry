@@ -1,4 +1,4 @@
-package yxlotl.idolatry;
+package yxlotl.idolatry.item;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
@@ -12,6 +12,7 @@ import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Blocks;
 import org.jetbrains.annotations.NotNull;
+import yxlotl.idolatry.IdolatryItems;
 
 public class EchoDustItem extends Item {
     public EchoDustItem(Properties properties) {

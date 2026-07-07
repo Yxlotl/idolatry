@@ -7,6 +7,8 @@ import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
+import yxlotl.idolatry.item.EchoDustItem;
+import yxlotl.idolatry.item.IdolItem;
 
 import java.util.function.Function;
 
@@ -25,7 +27,7 @@ public class IdolatryItems {
     }
 
     public static final Item ECHO_DUST = register("echo_dust", EchoDustItem::new, new Item.Properties().rarity(Rarity.UNCOMMON));
-    public static final Item IDOL = register("idol", Item::new, new Item.Properties().rarity(Rarity.UNCOMMON).stacksTo(1));
+    public static final Item IDOL = register("idol", IdolItem::new, new Item.Properties().rarity(Rarity.UNCOMMON).stacksTo(1));
     public static final Item IDOL_CURSED = register("idol_cursed", Item::new, new Item.Properties().rarity(Rarity.UNCOMMON).stacksTo(1));
     public static final Item IDOL_WINGS = register("idol_wings", Item::new, new Item.Properties().rarity(Rarity.UNCOMMON).stacksTo(1));
     public static final Item IDOL_WINGS_CURSED = register("idol_wings_cursed", Item::new, new Item.Properties().rarity(Rarity.UNCOMMON).stacksTo(1));
