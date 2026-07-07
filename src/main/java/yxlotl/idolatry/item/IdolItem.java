@@ -8,6 +8,7 @@ import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.item.ItemEntity;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Rarity;
@@ -28,7 +29,8 @@ public class IdolItem extends Item {
     @Override
     public @NotNull InteractionResult useOn(UseOnContext context) {
         Level level = context.getLevel();
-        if (context.getItemInHand().getItem().equals(IdolatryItems.IDOL)) {
+        ItemStack inHand = context.getItemInHand();
+        if (inHand.getItem().equals(IdolatryItems.IDOL)) {
             BlockPos pos = context.getClickedPos();
             if (level.getBlockState(pos).is(Blocks.LODESTONE)) {
                 if (!level.isClientSide()) {
@@ -40,6 +42,25 @@ public class IdolItem extends Item {
                     return InteractionResult.SUCCESS_SERVER;
                 }
                 return InteractionResult.SUCCESS;
+            } else {
+                LodestoneTracker tracker = inHand.get(DataComponents.LODESTONE_TRACKER);
+                if (tracker != null) {
+                    Player p = context.getPlayer();
+                    BlockPos tPos = tracker.target().get().pos();
+                    for (int i = 0; i < 20; i++) {
+                        double tx = tPos.getX() + (level.getRandom().nextDouble() - 0.5)*16;
+                        double ty = Math.clamp(tPos.getY(), level.getMinY(), level.getMaxY());
+                        double tz = tPos.getZ() + (level.getRandom().nextDouble() - 0.5)*16;
+                        if (p.randomTeleport(tx, ty, tz, true)) {
+                            level.playSound(null, pos, SoundEvents.CHORUS_FRUIT_TELEPORT, SoundSource.PLAYERS, 1.0F, 1.0F);
+                            level.playSound(null, p.getOnPos(), SoundEvents.CHORUS_FRUIT_TELEPORT, SoundSource.PLAYERS, 1.0F, 1.0F);
+                            p.resetFallDistance();
+                            return InteractionResult.SUCCESS;
+                        }
+                    }
+                    level.playSound(null, p.getOnPos(), SoundEvents.BEACON_DEACTIVATE, SoundSource.PLAYERS, 1.0F, 1.0F);
+                    return InteractionResult.SUCCESS;
+                }
             }
         }
         return InteractionResult.PASS;
