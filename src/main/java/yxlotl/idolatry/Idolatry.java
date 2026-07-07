@@ -22,7 +22,7 @@ public class Idolatry implements ModInitializer {
 		// Proceed with mild caution.
 		IdolatryItems.initialize();
 		IdolatryBlocks.initialize();
-		LOGGER.info("Hello Fabric world!");
+		LOGGER.info("Rescinding Deuteronomy 5:8...");
 	}
 
 	public static Identifier id(String path) {

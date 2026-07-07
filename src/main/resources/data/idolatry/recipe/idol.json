@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "AGA",
+    "GIG",
+    " G "
+  ],
+  "key": {
+    "A": "minecraft:amethyst_shard",
+    "G": "minecraft:gold_ingot",
+    "I": "minecraft:compass"
+  },
+  "result": {
+    "id": "idolatry:idol",
+    "count": 1
+  }
+}

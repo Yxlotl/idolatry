@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:smithing_transform",
+  "base": "idolatry:idol_wings",
+  "addition": "idolatry:echo_dust",
+  "template": "minecraft:sculk_vein",
+  "result": "idolatry:idol_wings_cursed"
+}

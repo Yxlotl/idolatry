@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:smithing_transform",
+  "base": "idolatry:idol",
+  "addition": "minecraft:phantom_membrane",
+  "template": "minecraft:string",
+  "result": "idolatry:idol_wings"
+}
