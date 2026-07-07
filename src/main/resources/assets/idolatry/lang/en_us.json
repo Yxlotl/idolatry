@@ -1,9 +1,9 @@
 {
-  "item.idolatry.echo_dust": "Echo Dust",
-  "item.idolatry.idol": "Idol",
-  "item.idolatry.idol_cursed": "Cursed Idol",
-  "item.idolatry.idol_wings": "Fleeting Idol",
-  "item.idolatry.idol_wings_cursed": "Vanishing Idol",
+  "item.idolatry.echo_dust": "Echo Glitter",
+  "item.idolatry.idol": "Idol of Swift Transmission",
+  "item.idolatry.idol_cursed": "Idol of the Road Well-Traveled",
+  "item.idolatry.idol_wings": "Idol of the Pulled Strings",
+  "item.idolatry.idol_wings_cursed": "Idol of the Desperate Times",
   "item.idolatry.sculk_heart": "Sculk Heart",
   "block.idolatry.echo_block": "Reverberation"
 }
